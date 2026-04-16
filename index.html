@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>CarePlus</title>
+<style>body{font-family:Arial,sans-serif;margin:0;background:#f8fafc}header{padding:20px;background:#0ea5e9;color:#fff}.container{max-width:1100px;margin:auto;padding:20px}.hero{padding:60px 20px}.btn{background:#0ea5e9;color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none}.tools{position:fixed;right:20px;bottom:20px}.panel{display:none;background:#fff;padding:10px;border:1px solid #ccc}.cb{filter:grayscale(.1) contrast(1.2) saturate(.7)}</style>
+<script>
+function toggleSettings(){let p=document.getElementById('p');p.style.display=p.style.display=='block'?'none':'block'}
+function toggleCB(){document.body.classList.toggle('cb')}
+function speakPage(){speechSynthesis.cancel();speechSynthesis.speak(new SpeechSynthesisUtterance(document.body.innerText))}
+function stopSpeak(){speechSynthesis.cancel()}
+</script></head>
+<body><header><div class='container'><h1>CarePlus Healthcare</h1></div></header>
+<section class='hero container'><h2>Advanced Healthcare with Compassionate Care</h2><p>Professional responsive healthcare website ready to deploy.</p><a class='btn' href='#'>Book Appointment</a></section>
+<div class='tools'><button onclick='toggleSettings()'>Settings</button><div id='p' class='panel'><button onclick='toggleCB()'>Color Blind Mode</button><button onclick='speakPage()'>Enable TTS</button><button onclick='stopSpeak()'>Stop Voice</button></div></div>
+</body></html>
